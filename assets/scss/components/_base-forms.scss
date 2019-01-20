@@ -1,0 +1,64 @@
+/* != Base Form Styles */
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: $bodyfontfamily;
+  color:$clrDarkGrey;
+
+  &.error {
+    padding:10px;
+    margin: 5px 0 10px;
+    border-radius:8px;
+    display: block;
+    color:$clrWhite;
+    background:$clrRed;
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: $bodyfontfamily;
+  line-height: 1.1;
+  border: none;
+  border: 1px solid $clrPaleGrey;
+  padding: 12px 30px 12px;
+  border-radius: 16px;
+  width: 100%;
+  -webkit-appearance: none;
+
+  &.error {
+    margin-bottom: 5px;
+  }
+}
+
+select {
+  display: block;
+  padding-right: 50px; 
+  background: $clrWhite url(../img/placeholder_epoch.png) calc(100% - 20px) 50% no-repeat;
+
+  @include mq(ie) {
+    padding-right:30px;
+    background-image:none;
+  }
+}
+
+::placeholder {
+  color: $clrLightGrey;
+}
+
+input[type="submit"],
+button {
+  @extend %buttonBase;
+  margin-top: 15px;
+}
+
+.st_PageContent {
+  .ajax-progress {
+    display: none;
+  }
+}
+

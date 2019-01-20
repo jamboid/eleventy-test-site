@@ -1,0 +1,70 @@
+//  Video component
+
+.cp_Video {
+  $self: &;
+
+  padding:var(--cp_Video--layout--padding);
+
+  &__frame {
+    line-height: 0;
+    position: relative;
+
+    &--embed {
+      padding-top: 56.25%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+      }
+    }
+  }
+
+  &__player {
+    max-width:100%; 
+    height:auto;
+  }
+
+  &__toggle {
+    line-height: 1;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition:background-color var(--generic--timing--long);
+    text-indent: -9999px;
+
+    &:after {
+      width: var(--generic--layout--largeIconSize);
+      height: var(--generic--layout--largeIconSize);
+      background:var(--icon--file--play) center center;
+      background-size:contain;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%) scale(0.8);
+      opacity: 0;
+      transition:opacity var(--generic--timing--long), transform var(--generic--timing--long);
+    }
+
+    &:hover, &:active {
+      background-color:rgba($clrWhite,0.5);
+
+      &:after {
+        opacity: 1;
+        transform:translate(-50%,-50%) scale(1);
+      }
+    }
+  }
+
+  &.is_Playing {
+    #{ $self }__toggle {
+      &:after {
+        background-image:var(--icon--file--pause);
+      }
+    }
+  }
+}

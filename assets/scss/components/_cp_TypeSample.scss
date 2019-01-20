@@ -1,0 +1,31 @@
+// Type Sample Component
+
+.cp_TypeSample {
+  padding:var(--cp_TypeSample--layout--padding);
+
+  &__intro {
+    max-width:em(700);
+    margin:0 auto em(15) 0;
+  }
+
+  &__sample {
+    padding:calc(var(--cp_TypeSample--layout--samplePadding) / 2) var(--cp_TypeSample--layout--samplePadding);
+    overflow: hidden;
+  }
+
+  &__text {
+    overflow: scroll;
+    line-height:1.3;
+    padding:calc(var(--cp_TypeSample--layout--samplePadding) / 2) 0;
+  }
+}
+
+/* !== Breakpoint */
+@include mq($bpHan) { 
+  .cp_TypeSample {
+    &__intro,
+    &__sample {
+      grid-column: span 2;
+    }
+  }
+}

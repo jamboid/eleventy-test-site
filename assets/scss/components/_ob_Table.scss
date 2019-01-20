@@ -1,0 +1,12 @@
+// Table object
+
+.ob_Table {
+  overflow:scroll;
+  padding:0 0 15px;
+
+  table {
+    th {
+      white-space: nowrap;
+    }
+  }
+}

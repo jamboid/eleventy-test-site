@@ -1,0 +1,31 @@
+// Content Section object
+
+.ob_Section {
+  background:var(--ob_Section--colour--background);
+  color:var(--ob_Section--colour--text);
+  padding:var(--ob_Section--layout--padding);
+
+  &--default {
+    + .ob_Section {
+      &--default {
+        padding-top: 0;
+      }
+
+      &--ctas {
+        background:var(--ob_Section--colour--background-alt);
+        color:var(--ob_Section--colour--text-alt);
+      }
+    }
+  }
+
+  &--alt {
+    background:var(--ob_Section--colour--background-alt);
+    color:var(--ob_Section--colour--text-alt);
+
+    + .ob_Section {
+      &--alt {
+        padding-top: 0;
+      }
+    }
+  }
+}

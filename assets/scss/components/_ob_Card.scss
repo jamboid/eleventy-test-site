@@ -1,0 +1,30 @@
+// Card object
+
+.ob_Card {
+  background:var(--ob_Card--colour--background);
+  color:var(--ob_Card--colour--text);
+  box-shadow:var(--ob_Card--shadow--default);
+  border:var(--ob_Card--colour--outerBorder);
+  margin:var(--ob_Card--layout--margin);
+
+  &--cta {
+    border:none;
+  }
+
+  &__details {
+    border:var(--ob_Card--colour--outerBorder);
+    border-top-width:0px;
+
+    &:first-child {
+      border-top:var(--ob_Card--colour--outerBorder);
+    }
+  }
+}
+
+.ob_Section--alt {
+  .ob_Card {
+    background:var(--ob_Card--colour--background-alt);
+    color:var(--ob_Card--colour--text-alt);
+    border:var(--ob_Card--colour--outerBorder-alt);
+  }
+}

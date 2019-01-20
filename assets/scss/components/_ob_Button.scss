@@ -1,0 +1,21 @@
+// Button Object
+
+
+.ob_Button {
+  display: inline-block;
+  background: var(--ob_Button--colour--background);
+  font: var(--ob_Button--type--style);
+  color: var(--ob_Button--colour--text);
+  text-align: center;
+  padding:var(--ob_Button--layout--padding);
+  border:var(--ob_Button--layout--border);
+  border-radius:var(--ob_Button--layout--borderRadius);
+  text-decoration: none;
+  transition:var(--ob_Button--animation--transition);
+
+  &:hover, &:focus, &:active {
+    background: var(--ob_Button--colour--backgroundHover);
+    color: var(--ob_Button--colour--textHover);
+    border:var(--ob_Button--layout--borderHover);
+  }
+}

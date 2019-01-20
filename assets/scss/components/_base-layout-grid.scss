@@ -1,0 +1,145 @@
+// Base Grid Layout styles
+
+.gd_Page,
+.gd_Section,
+.gd_Cards,
+.gd_Images,
+.gd_CTAs {
+  display:grid;
+  width: 100%;
+}
+
+// Top-level layout grid for page
+.gd_Page {
+  grid-template-columns:320px minmax(auto, 1600px) auto;
+  grid-template-rows:auto auto auto auto;
+  grid-template-areas: 
+    "hd hd hd"
+    "sy sy sy"
+    "nv mn ."
+    "nv ft ft";
+}
+
+// TODO: Move these into their own Sass files
+.st_PageHeader {
+  grid-area:hd;
+  position: relative;
+  z-index: 110;
+}
+
+.st_PageContent { 
+  grid-area:mn;
+  background:$clrWhite;
+}
+
+.st_Navigation {
+  grid-area:nv;
+  background:var(--st_Navigation--colour--background);
+  min-height:calc(100vh - 80px);
+  position: relative;
+  z-index: 100;
+  transition:all var(--generic--timing--long);
+}
+
+.st_PageFooter {
+  grid-area:ft;
+  background:var(--st_PageFooter--colour--background);
+  color:var(--st_PageFooter--colour--text);
+}
+ 
+// Basic content section
+.gd_Section {
+  grid-template-columns: 1fr 1fr;
+  grid-gap:var(--grid--gap--default);
+
+  &--1up {
+    grid-template-columns: 1fr;
+  }
+
+  .cp_SectionTitle,
+  .cp_Text,
+  .cp_SimpleImage,
+  .ob_CardsList,
+  .cp_ImageGallery, 
+  .cp_CTA,
+  .cp_Highlight,
+  .cp_Text--quote,
+  .ob_Tabs {
+    grid-column:span 1;
+  }
+
+  &--2up {
+    grid-template-columns: 1fr 1fr;
+
+    .cp_SectionTitle,
+    .ob_CardsList,
+    .cp_ImageGallery,
+    .ob_Tabs,
+    .cp_Text--quote {
+      grid-column:span 2;
+    }
+  }
+}
+
+// Cards List Section
+.gd_Cards {
+  grid-gap:var(--grid--gap--default);
+
+  &--large {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  &--small {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+// Image and CTA Grids
+.gd_Images,
+.gd_CTAs {
+  grid-gap:var(--grid--gap--default);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* !== Breakpoint */
+@include mq($bpChewie) {
+  .gd_Page {
+    grid-template-columns:0 minmax(auto, 1200px) 0;
+    grid-template-areas: 
+      "hd hd hd"
+      "nv sy sy"
+      "nv mn ."
+      "nv ft ft";
+  }
+
+  .st_Navigation {
+    position: fixed;
+    transform:translateX(calc(-100% - 20px)); 
+    min-height:100vh;
+  }
+
+  .nav_Visible {
+    .st_Navigation {
+      transform:translateX(0); 
+    }
+  }
+}
+
+/* !== Breakpoint */
+@include mq($bpLando) {
+  .gd_Section {
+    .cp_Text,
+    .cp_SimpleImage,
+    .cp_Rules__list {
+      grid-column:span 2;
+    }
+  }
+}
+
+/* !== Breakpoint */
+@include mq($bpArtoo) {
+  .gd_Cards,
+  .gd_Images {
+    grid-template-columns: 1fr;
+  }
+}

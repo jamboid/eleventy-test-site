@@ -1,0 +1,86 @@
+/* != Framework - Global Colour Settings */
+
+// Variables and other settings that are used globally
+
+/*
+
+HOW TO USE COLOUR VARIABLES IN THIS SASS PROJECT
+------------------------------------------------
+
+There are a couple of options available to you:
+
+================
+1-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Use these COLOUR-DESCRIPTIVE VARIABLES directly, throughout the project's other .scss files
+
+RESULT: Colours are presented in the code in a much more readable and meaningful format
+
+BEST FOR: Projects with one theme
+
+
+================
+2-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Define a set of SEMANTIC-STRUCTURAL VARIABLES to use throughout your Sass files (e.g. $clrPageHeaderBackground)
+3. Set the SEMANTIC VARIABLES using the COLOUR-DESCRIPTIVE VARIABLES in this file only
+
+RESULT: Colours are managed in one location and colour changes will not require renaming variables throughout the set of Sass files
+
+BEST FOR: Projects that involve multiple themes or skins
+
+*/
+
+/* !== COLOUR-DESCRIPTIVE VARIABLES */
+$clrNone: none;
+$clrInvsibile: rgba(0,0,0,0);
+
+/* ! Black to White */
+$clrBlack: #050302;
+$clrDarkGrey: #3C3C44;
+$clrMurkyGrey:#53565A;
+$clrGrey: #666565;
+$clrLightGrey: #969696;
+$clrPalerShadeOfGrey:#B4B4B4;
+$clrVeryLightGrey:#D8D8D9;
+$clrPaleGrey: #e6e6e6;
+$clrOffWhite:#F7F7F7;
+$clrWhite: #fff;
+
+$clrYellow:#FFBB24;
+$clrPaleYellow:#FFF2DF;
+
+$clrLightGreen:#F0FFF8;
+$clrGreen:#1FAC0E;
+$clrDarkGreen:#00959b;
+
+$clrBrightBlue:#4995EE;
+$clrLightBlue:#53a5ce;
+$clrKindOfBlue:#163A59;
+$clrBlue:#003B5C;
+$clrDarkBlue:#203244;
+
+$clrLightRed:#FFF0F4;
+$clrRed:#ee495b;
+$clrDarkRed:#a5005e;
+
+$clrOrange:#EE8B49;
+
+$clrLightPink:#FFF1FC;
+$clrPink:#E3147E;
+$clrDarkPink:#e6007e;
+
+$clrLightPurple:#F9F6FF;
+$clrPurple:#9353f6;
+$clrDarkPurple:#49357a;
+
+$clrPrimaryAccent:$clrDarkGreen;
+$clrPrimaryTint:$clrGreen;
+$clrPrimaryHighlight:$clrLightGreen;
+
+// Fallback Colours
+$clrFallBackAccent: $clrDarkGreen;

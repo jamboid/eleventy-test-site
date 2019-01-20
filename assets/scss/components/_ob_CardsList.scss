@@ -1,0 +1,8 @@
+//  Cards List object
+
+.ob_CardsList {
+  grid-column:span 12;
+  grid-gap:var(--grid--gap--cards);
+  align-items: start;
+  padding:var(--ob_CardsList--layout--padding);
+}

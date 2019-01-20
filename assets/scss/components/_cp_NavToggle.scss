@@ -1,0 +1,25 @@
+// Main Navigation Toggle component
+
+.cp_NavToggle {
+  color:$clrWhite;
+  text-decoration: none;
+  padding:var(--st_PageHeader--layout--padding);
+  display: block;
+  text-indent: -9999px;
+  width: 60px;
+  background:var(--generic--colour--accent) url(../img/icon_hamburger.svg) center center no-repeat; 
+  transition:background-color var(--generic--timing--long);
+}
+
+.nav_Visible {
+  .cp_NavToggle {
+    background:$clrGrey url(../img/icon_cross.svg) center center no-repeat; 
+  }
+}
+
+/* !== Breakpoint */
+@include mq(plusOne($bpChewie), $limit: min) {
+  .cp_NavToggle {
+    display: none;
+  }
+}

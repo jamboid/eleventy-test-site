@@ -1,0 +1,26 @@
+/* != Framework - Global Typography Settings */
+
+// Variables and other settings that are used globally
+
+/* !== Typography */
+
+// Global base text size - Set without units
+$textBase: 16;
+
+/* ! Font Families */
+$bodyfontfamily:'Univers', sans-serif;
+$displayfontfamily: $bodyfontfamily;
+$altbodyfontfamily:baskerville-urw, serif; 
+
+/* ! Font Weights */
+$extralight: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$black: 900;
+
+/* ! Base Font Values - used as the default for things like basic paragraphs, lists, etc. */
+$baseFontSize : 16px;
+$baseLineHeight : 1.3;

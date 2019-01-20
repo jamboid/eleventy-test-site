@@ -1,0 +1,22 @@
+/* !== Flexbox-based w/ legacy fallbacks */
+[class*="fx_"] {
+  @include gridBase;
+}
+
+// Controls the layout of a list of Promo components
+.fx_List {
+  @include gridList;
+}
+
+// Simple row of elements
+.fx_Group {
+  @include gridRow;
+}
+
+.fx_Content {
+  @include gridCol; 
+}
+
+// .fx_Natural {
+//   @include gridNaturalAlignment;
+// }

@@ -1,0 +1,48 @@
+//  Rules Lists component
+
+.cp_Rules {
+  padding:var(--cp_Rules--layout--padding);
+
+  &__list {
+    margin-top:calc(var(--cp_Rules--layout--iconSize) / 2);
+    padding:calc(var(--cp_Rules--layout--listPadding) + (var(--cp_Rules--layout--iconSize) / 4)) var(--cp_Rules--layout--listPadding) var(--cp_Rules--layout--listPadding);
+    
+    position: relative;
+
+    &:before {
+      width: calc(100% + 4px);
+      height: 10px;
+      background:var(--generic--colour--accent);
+      bottom: -2px;
+      left: -2px;
+    }
+
+    &:after {
+      width:var(--cp_Rules--layout--iconSize);
+      height:var(--cp_Rules--layout--iconSize);
+      top:0;
+      left:var(--cp_Rules--layout--iconLeft);
+      transform:translate(0, -50%); 
+      background:url(../img/icon_do.svg) center center no-repeat;
+      background-size:contain;
+    }
+
+    &--do { 
+      --generic--colour--accent: var(--cp_Rules--colour--do);
+      --heading--color--level-2:var(--generic--colour--accent);
+      
+      &:after {
+        background-size:contain;
+      }
+    }
+
+    &--dont {
+      --generic--colour--accent: var(--cp_Rules--colour--dont);
+      --heading--color--level-2:var(--generic--colour--accent);
+
+      &:after {
+        background-image:url(../img/icon_dont.svg);
+      }
+    }
+  }
+}

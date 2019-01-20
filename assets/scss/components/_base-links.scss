@@ -1,0 +1,9 @@
+/* != Links - Base Styles */
+
+a {
+  transition:color var(--generic--timing--standard);
+
+  &:hover, &:focus, &:active {
+
+  }
+}

@@ -1,0 +1,22 @@
+//  Brand component
+
+.cp_Brand {
+  &__link {
+    text-decoration: none;
+    color:var(--cp_Brand--colour--text); 
+    align-items: center;
+    padding:var(--st_PageHeader--layout--padding);
+  } 
+
+  &__logo {
+    width: 120px;
+    margin-right: 30px;
+    padding-right: 32px; 
+    border-right:2px solid var(--cp_Brand--colour--border);
+  }
+
+  &__title {
+    font:var(--type--style--heading4);
+    margin-bottom: 0;
+  }
+}

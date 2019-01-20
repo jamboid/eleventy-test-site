@@ -1,0 +1,35 @@
+//  Tabs object
+
+.ob_Tabs {
+  &__controls {
+    width: 100%;
+    border-bottom:var(--ob_Tabs--layout--tabBorder);
+  }
+
+  &__control {
+    flex:1 1 0;
+    font:var(--type--style--heading4);
+    color: var(--ob_Tabs--colour--tabText);
+    background: var(--ob_Tabs--colour--tabBackground);
+    text-align: center;
+    text-decoration: none;
+    padding:var(--ob_Tabs--layout--tabPadding);
+
+    &.is_Current {
+      color: var(--ob_Tabs--colour--tabTextCurrent);
+      background: var(--ob_Tabs--colour--tabBackgroundCurrent);
+    }
+
+  }
+
+  &__panel {
+    overflow: hidden;
+    display: none;
+    padding:var(--ob_Tabs--layout--panelPadding);
+    background:var(--ob_Tabs--colour--panelBackground);
+
+    &.is_Current {
+      display: block;
+    }
+  }
+}

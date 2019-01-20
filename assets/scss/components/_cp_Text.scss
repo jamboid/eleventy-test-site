@@ -1,0 +1,18 @@
+//  Simple Text Component
+
+.cp_Text {
+  padding:var(--cp_Text--layout--padding);
+
+  &__content {
+    max-width:30em;
+    margin-right: auto;
+  }
+
+  &--quote {
+    max-width:var(--cp_SectionTitle--layout--maxWidth);
+  }
+
+  &--table {
+    max-width:100%;
+  }
+}

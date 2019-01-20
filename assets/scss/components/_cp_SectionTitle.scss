@@ -1,0 +1,18 @@
+// Section Title component
+
+.cp_SectionTitle {
+  padding:var(--cp_SectionTitle--layout--padding);
+
+  &__content {
+    max-width:var(--cp_SectionTitle--layout--maxWidth);
+    margin:0 auto 0 0;
+
+    h1,h2 {
+      margin:0 0 0.4em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Navigation container
+
+.st_Navigation {
+  border-right:2px solid $clrVeryLightGrey;
+}
+
+/* !== Breakpoint */
+@include mq($bpChewie) {
+  .st_Navigation {
+    border-right:2px solid $clrVeryLightGrey;
+    //background:$clrWhite;
+  }
+}

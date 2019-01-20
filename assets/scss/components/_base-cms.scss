@@ -1,0 +1,101 @@
+/* != Drupal CMS Admin Styles */
+
+
+.layout-messages {
+  grid-area:sy;
+  
+  nav.tabs {
+    max-width:em(1600);
+    margin:0 auto;
+    padding:em(20) 0 0; 
+    background:$clrVeryLightGrey; 
+    background:var(--generic--colour--accent); 
+
+    @supports(display:grid) {
+      display: grid;
+      grid-column-gap: var(--colGap);
+      grid-template-columns: 5vw repeat(12, 1fr) 5vw;
+      max-width:100%;
+    }
+
+    ul {
+      display:flex;
+
+      @supports(display:grid) {
+        grid-column:2 / span 12;
+      }
+    }
+
+    li {
+      margin-right:15px;
+
+      a {
+        display: block;
+        padding:em(10) em(20);
+        text-decoration: none;
+        color:$clrDarkGrey;
+        background:rgba($clrWhite,0.75);
+
+        &:hover, &:focus, &:active {
+          background:rgba($clrWhite,1);
+        }
+        
+
+        &.is-active {
+          background:$clrWhite;
+        }
+      }
+    }
+  }
+}
+
+.st_PageContent {
+    form.user-login-form
+    
+    // ,.contextual-region 
+    {
+      max-width:em(800);
+      margin:0 auto;
+      padding:em(40);
+      margin-bottom:em(75);
+      background:$clrWhite;
+    }
+  }
+  
+  
+
+.st_PageContent > form {
+  .form-item {
+    width: 100% !important;
+  }
+
+  input,textarea {
+    width:100% !important;
+    max-width:600px !important;
+  }
+
+  input[type=submit] {
+    width: auto !important;
+  }
+
+  label {
+    display: block;
+    padding-left: 0;
+    margin:15px 0 10px;
+
+    &.error {
+      padding-top: 0;
+    }
+  }
+
+  .description {
+    padding:5px 0;
+    max-width: 600px;
+  }
+}
+
+
+//TODO - Remove this
+[aria-label*=Error] {
+  display: none !important;
+} 

@@ -1,0 +1,35 @@
+// CTA Card component
+
+.cp_CTA {
+  &__link {
+    text-decoration: none;
+    color:var(--cp_CTA--colour--text);
+
+    &:hover, &:focus, &:active {
+      color:var(--cp_CTA--colour--textHover);
+    }
+  }
+
+  &__image {
+    line-height: 0;
+  }
+
+  &__details {
+    padding:var(--cp_CTA--layout--detailsPadding);
+
+    h3 {
+      color:var(--cp_CTA--colour--headingText);
+    }
+  }
+
+  &__description {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+  }
+}
