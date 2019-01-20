@@ -1,0 +1,14 @@
+//  Page Title component
+
+.cp_PageTitle {
+  padding:var(--cp_PageTitle--layout--padding); 
+
+  &__title {
+    margin-bottom: 0.4em;
+  }
+
+  &__details {
+    max-width:var(--cp_PageTitle--layout--maxWidth);
+    margin:0 auto 0 0;
+  }
+}

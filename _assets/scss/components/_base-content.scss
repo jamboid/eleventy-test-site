@@ -1,0 +1,31 @@
+/* != Standard CSS-Generated Content */
+
+.ct_Pseudo {
+  position: relative;
+
+  &:before,
+  &:after {
+    content:"";
+    display: block;
+    position: absolute;
+  }
+}
+
+.ct_Divider {
+  &:after {
+    width: 60px;
+    height: 1px;
+    background:$clrMurkyGrey;
+    bottom:0;
+    left:calc(50% - 30px);
+  }
+}
+
+.ct_Sprite {
+  position: relative;
+
+  &:before,
+  &:after {
+    @extend %spriteBase;
+  }
+}

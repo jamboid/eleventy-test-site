@@ -1,0 +1,40 @@
+//  Simple Image Components
+
+.cp_SimpleImage {
+  padding:var(--cp_SimpleImage--layout--padding);
+
+  &__title {
+    font:var(--cp_SimpleImage--type--titleFont);
+    margin:0 0 10px;
+  }
+
+  &__image {
+    position: relative; 
+    display: block;
+    line-height: 0;
+    margin-bottom:var(--cp_SimpleImage--layout--imageMarginBottom);
+
+    img {
+      width: 100%;
+    }
+
+    &--zoomLink { 
+      &:after {
+        width: var(--generic--layout--smallIconSize);
+        height: var(--generic--layout--smallIconSize);
+        background:var(--icon--file--magnify) center center no-repeat;
+        background-size:contain;
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        transition:opacity var(--generic--timing--long);
+      }
+
+      &:hover, &:focus, &:active {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

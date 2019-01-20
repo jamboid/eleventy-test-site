@@ -1,0 +1,45 @@
+/* != Framework Module - BUTTONS */
+
+/* !== Basic Button Style */
+@mixin buttonBase {
+  font: $bold 16px/ normal $bodyfontfamily;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  padding: em(13, 16) em(30, 16);
+  text-decoration: none;
+  transition: all var(--generic--timing--standard);
+  cursor: pointer;
+  border: 1px solid $clrPrimaryTint;
+  border-color: var(--buttonTint);
+  border-radius: em(25, 16);
+  background: $clrWhite;
+  color: $clrDarkGrey;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $clrPrimaryTint;
+    background-color: var(--buttonTint);
+    box-shadow: 1px 2px 1px rgba($clrDarkGrey, 0.1);
+  }
+
+  &:active {
+    box-shadow:none; 
+  }
+
+  /* !== Breakpoint */
+  @include mq($bpArtoo) {
+    padding: em(10, 16) em(24, 16);
+  }
+
+  /* !== Breakpoint */
+  @include mq($bpYoda) {
+    font-size: 14px;
+  }
+}
+
+/* Placeholder for buttonBase @extend */
+%buttonBase {
+  @include buttonBase;
+}

@@ -1,0 +1,23 @@
+// Image Object
+
+.ob_Media {
+  &--image {
+    line-height: 0;
+  }
+  
+  img,
+  svg,
+  video {
+    max-width:100%;
+    height:auto;
+  }
+
+  &__caption {
+    line-height: 1;
+    margin:1em 0;
+  }
+
+  &.is_Hidden {
+    display: none;
+  }
+}

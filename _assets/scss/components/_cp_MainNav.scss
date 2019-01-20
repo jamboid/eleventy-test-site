@@ -1,0 +1,52 @@
+// Main Navigation
+
+.cp_MainNav {
+  $self: &;
+  
+  position:sticky;
+  top:80px;
+  padding:calc(2 * var(--cp_MainNav--layout--padding)) var(--cp_MainNav--layout--padding);
+  max-height:calc(100vh - 80px);
+  overflow-y: scroll;
+  overflow-x: visible;
+
+  &__menu {
+    width: 100%;
+  }
+
+  &__subMenu {
+    margin-left:calc(0.75 * var(--cp_MainNav--layout--padding));
+    margin-bottom:var(--cp_MainNav--layout--padding);
+  }
+
+  &__item {
+    
+    font:var(--cp_MainNav--type--navItem);
+    
+    a {
+      display: block;
+      padding:10px 12px;
+      text-decoration: none;
+      color:var(--st_Navigation--colour--text);
+      border-radius:2px;
+
+      &:hover, &:focus, &:active {
+        background:rgba($clrLightGrey,0.1);
+      }
+    }
+
+    #{ $self }__item {
+      margin-bottom: 0;
+      font:var(--cp_MainNav--type--navSubItem);
+    }
+  }
+}
+
+/* !== Breakpoint */
+@include mq($bpChewie) {
+  .cp_MainNav {
+    width: 300px;
+    position: relative;
+    overflow: visible;
+  }
+}

@@ -1,0 +1,62 @@
+/* ! Framework Module - TYPOGRAPHY */
+
+/*
+ * @mixins
+ */
+
+// Font Style Mixins
+
+@mixin heading-1 {
+  font-size:em(16);
+  font-weight: $semibold;
+  line-height: 1.4;
+}
+
+@mixin heading-2 {
+  font-size:em(20);
+  font-weight: $semibold;
+  line-height: 1.25;
+}
+
+@mixin heading-3 {
+  font-size:em(32);
+  font-weight: $bold;
+  line-height: 1.25;
+}
+
+@mixin heading-4 {
+  font-size:em(48);
+  font-weight: $bold;
+  line-height: 1.1;
+}
+
+@mixin heading-5 {
+  font-family: $displayfontfamily;
+  font-size:em(42);
+  line-height: 1.1;
+  letter-spacing:em(-3,42);
+  text-transform: uppercase;
+}
+
+@mixin heading-6 {
+  font-family: $displayfontfamily;
+  font-size:em(60);
+  line-height: 1.1;
+  letter-spacing:em(-3,60);
+  text-transform: uppercase;
+}
+
+@mixin heading-7 {
+  font-family: $displayfontfamily;
+  font-size:em(114);
+  line-height: 1.1;
+  letter-spacing:em(-3,114);
+  text-transform: uppercase;
+}
+
+/* !== Hide Text */
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9999px;
+  display:block;
+}

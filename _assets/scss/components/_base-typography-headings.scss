@@ -1,0 +1,58 @@
+// Base Heading Styles
+
+
+.tx_Prose {
+  h1 {
+    font:var(--type--style--heading1);
+    color:var(--heading--color--level-1);
+  }
+
+  h2 { 
+    font:var(--type--style--heading2); 
+    color:var(--heading--color--level-2);
+  }
+  
+  h3 {
+    font:var(--type--style--heading3);
+    color:var(--heading--color--level-3);
+  }
+
+  h4 { 
+    font:var(--type--style--heading4);
+    color:var(--heading--color--level-4); 
+  }
+
+  h5 {
+    font:var(--type--style--heading5);
+    color:var(--heading--color--level-5);
+    text-transform: uppercase;
+  }
+
+  h6 {
+    font:var(--type--style--heading5);
+    color:var(--heading--color--level-5);
+    
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin:0 0 0.4em;
+
+    em {
+      color:var(--generic--colour--accent); 
+      font-weight: $bold;
+      font-style: normal;
+    }
+  }
+
+  &--header {
+    h1,h2,h3,h4,h5,h6 {
+      color:var(--st_PageHeader--colour--text);
+    }
+  }
+}
+
+.tx_Card {
+  h5 {
+    margin:0.2em 0;
+  }
+}

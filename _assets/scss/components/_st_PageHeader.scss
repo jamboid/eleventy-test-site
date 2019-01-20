@@ -1,0 +1,10 @@
+// Page Header Container
+
+.st_PageHeader {
+  background:var(--st_PageHeader--colour--background);
+  color:var(--st_PageHeader--colour--text);
+  position: sticky;
+  top:0;
+  z-index: 200;
+  box-shadow: var(--st_PageHeader--shadow--default);
+}

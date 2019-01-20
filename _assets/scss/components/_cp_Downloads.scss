@@ -1,0 +1,27 @@
+//  Downloads component
+
+.cp_Downloads {
+  padding:var(--cp_Downloads--layout--padding);
+  border-left:var(--cp_Downloads--layout--border);
+
+  &__intro {
+    max-width:var(--cp_Downloads--layout--maxWidth);
+  }
+
+  &__links {
+    //padding-top:calc(var(--cp_Downloads--layout--padding) * 1.5);
+  }
+
+  &__item {
+    margin:var(--cp_Downloads--layout--padding) var(--cp_Downloads--layout--padding) 0 0;
+  }
+
+  &__meta {
+    margin-top: em(12);
+    opacity: 0.75;
+  }
+
+  &__type {
+    text-transform: uppercase;
+  }
+}

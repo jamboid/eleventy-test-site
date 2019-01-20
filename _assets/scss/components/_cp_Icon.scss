@@ -1,0 +1,32 @@
+// Icon Sample component
+
+.cp_Icon {
+  &__sample {
+    text-align: center;
+    padding-top: calc(var(--cp_Icon--layout--maxSize) + 40px);
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top:20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: var(--cp_Icon--layout--maxSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width:var(--cp_Icon--layout--maxSize);
+      max-height:var(--cp_Icon--layout--maxSize);
+      width: 100%;
+      height:auto;
+    }
+  }
+
+  &__details {
+    padding:0 em(15) em(15);
+    text-align: center;
+  }
+}
