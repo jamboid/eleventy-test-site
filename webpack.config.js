@@ -6,7 +6,7 @@ const WebpackNotifierPlugin = require("webpack-notifier");
 // const fs = require('fs');
 
 const config = {
-  entry: ["./assets/js", "./assets/scss/screen.scss", "./assets/scss/theme.scss"],
+  entry: ["./_assets/js", "./_assets/scss/screen.scss", "./_assets/scss/theme.scss"],
   output: {
     filename: "assets/js/site.js",
     path: path.resolve(__dirname, "_site"),
@@ -27,7 +27,7 @@ const config = {
             loader: 'file-loader',
             options: {
               name: '[name].css',
-              context: './assets/scss/',
+              context: './_assets/scss/',
               outputPath: 'assets/css',
               publicPath: '/_site/assets/css'
             }
@@ -55,8 +55,8 @@ const config = {
   },
   resolve: {
     alias: {
-      Modules: path.resolve(__dirname, "assets/js/modules/"),
-      Sass: path.resolve(__dirname, "assets/scss/")
+      Modules: path.resolve(__dirname, "_assets/js/modules/"),
+      Sass: path.resolve(__dirname, "_assets/scss/")
     }
   },
   plugins: [
@@ -64,7 +64,7 @@ const config = {
     // new MiniCssExtractPlugin({
     //   filename: "/css/screen.css"
     // }),
-    new CopyWebpackPlugin([{ from: "assets/img", to: "assets/img" }]),
+    new CopyWebpackPlugin([{ from: "_assets/img", to: "assets/img" }]),
     new WebpackNotifierPlugin({ alwaysNotify: true })
   ]
 };

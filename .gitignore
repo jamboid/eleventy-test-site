@@ -75,11 +75,10 @@ typings/
 # FuseBox cache
 .fusebox/
 
-# Compiled Site
+# Compiled Output
 _site
 
 # OS generated files #
-######################
 .DS_Store
 .DS_Store?
 ._*
@@ -93,16 +92,9 @@ Thumbs.db
 /Icon
 
 # Sass #
-########
 .sass-cache
 *.scssc
 *.css.map
 
-# Codekit #
-###########
-.codekit-cache
-*.js.map
-
 # VS Code config files #
-########################
 .vscode
